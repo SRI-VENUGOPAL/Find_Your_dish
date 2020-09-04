@@ -1,0 +1,123 @@
+NAVBAR:
+
+In Documentation of bootstrap under components go to navbar.
+use codeply.com so, u can choose bootstrap and add elements ans see how it works.
+navigation bar is just a list of elements under a list with words.
+skeleton:
+<nav>
+  <ul>
+    <li>
+      <<a href="#"> contact</a> here contact is a link
+    </li>
+  </ul>
+</nav>
+this list is then converted into the navigation bar we want by using bootstrap.
+we add classes from bootstrap:
+class "navbar" to nav.
+class "navbar-nav" to ul (unorder list).
+class "nav-item" to li(list element).
+class "nav-link" to anchor tag.
+THIS MAKES THE NAVIGATION BAR VERTICAL.
+
+TO MAKE THIS HORIZONTAL:
+class "navbar-expand-lg" to div (this displays the link in horizontal)
+    navbar-expand-md / sm can also be used.
+TO MAKE THE NAVBAR A BACKGROUND:
+ class "bg-light" in nav
+ Bootstrap has number of colors namely:
+ primary = blue
+ secondary = grey
+ success = green
+ danger =  red
+ warning = yellow
+ Info = sea blue / cyan / bluishgreen
+ light = white
+ dark = black
+ link - like a link in blue(default)
+So, to change the background to other colors:
+class "bg-danger" in nav (results in red background)
+TO MAKE THE NAVBAR STYLE FROM BLUE:
+class "navbar-light" in nav.
+TO INCLUDE A BRAND OR MY BRAND LOGO IN THE NAV BAR:
+Add an anchor tag below the "nav tag" with class="navbar-brand"
+<a class ="navbar-brand" href="">TinDog</a>
+TO MAKE THE BRAND ON LEFT AND THE LINKS TO THE RIGHT:
+The container which holds all these together is "ul tag"
+so, add class "ml-auto" (margin left - auto) to ul.
+When this is added they come below each other when the size is reduced.
+so, we are gonna use class "" to get a hamburger menu or toggler
+which display the link when click on them as a dropdown.
+so, we included a button and created a div to enclose the "ul tag".
+If this created div encloses the "a tag" above the "ul tag" then, tindog will also be included in toggler
+in order to avoid it we use enclose only the "ul tag"
+This new div has a class "collapse navbar-collapse" and we also give an id to the div.
+this given id is used in the button as target to identify which part tot be collapsed.
+
+REFER THE DOCUMENTATION FOR DROPDOWN INSTEAD OF TOGGLE
+
+GRIDS: documentation - layout - grids
+
+for this we use class "col" and class "row"
+div with class "col" occupies entire row with the background color red as specified in the code.
+If we add two more div with the same class "col" it divides the row with 3 partition.
+<div class ="row">
+    <div class ="col" style="background-color:red; border: 1px solid;">col</div>
+    <div class ="col" style="background-color:red; border: 1px solid;">col</div>
+    <div class ="col" style="background-color:red; border: 1px solid;">col</div>
+</div>
+
+so, to we want a coloun which only took half the width of the screen...
+ we do this,
+ <div class ="row">
+     <div class ="col-6" style="background-color:green; border: 1px solid;">col</div>
+ </div>
+
+ once column is 12... when i specify col-6 it takes 50%
+ when i specify col-3 it is quater. but these columns are not responsive( ie. they donot change in ipad or phone etc.)
+
+FOR GETTING RESPONSIVE COLUMNS WHICH CHANGES THE NUMMBER OF GRIDS IN LAP OR TAB OR MOB:
+1. TAB:
+class "col-md-6" md = medium gives responsive code for columns for tab or larger
+12/4 is 3 3 grids per row
+when code is displayed in mob it takes 100% of the width
+<div class ="row">
+    <div class ="col-md-4" style="background-color:blue; border: 1px solid;">col</div>
+</div>
+
+2. LAPTOP:
+class   "col-lg-3" lg= large.12/3 is 4 grids or col in a row
+the bellow code has 4 responsive coloumns in laptop. in other devices like tab
+or mob it takes 100% of the row width. but this is not what we expect.
+<div class ="row">
+    <div class ="col-lg-3" style="background-color:yellow; border: 1px solid;">col-lg-3</div>
+    <div class ="col-lg-3" style="background-color:yellow; border: 1px solid;">col-lg-3</div>
+    <div class ="col-lg-3" style="background-color:yellow; border: 1px solid;">col-lg-3</div>
+    <div class ="col-lg-3" style="background-color:yellow; border: 1px solid;">col-lg-3</div>
+</div>
+
+3. MOB:
+class "col-sm-6" 12/6 is 2 so 2 grids or col in a row
+
+so, upon combining all the above we get responsive columns which has 2 grids in mob, 3 in tab and 4 in laptop.
+<div class ="row">
+    <div class ="col-lg-3 col-md-4 col-sm-6" style="background-color:yellow; border: 1px solid;">col-lg-3</div>
+    <div class ="col-lg-3 col-md-4 col-sm-6" style="background-color:yellow; border: 1px solid;">col-lg-3</div>
+    <div class ="col-lg-3 col-md-4 col-sm-6" style="background-color:yellow; border: 1px solid;">col-lg-3</div>
+    <div class ="col-lg-3 col-md-4 col-sm-6" style="background-color:yellow; border: 1px solid;">col-lg-3</div>
+</div>
+
+BOOTSTRAP CONTAINERS:
+class "container" contains the content of the div. width on laptop not 100% smaller desktop 960 tab 720 mob 540px
+class "container-fluid" this occupies the 100% width when gone from laptop to mob it changes the width fluidly.
+this is used so that sections can be moved fluidly.
+
+BOOTSTRAP BUTTONS:
+ documentation - components - BUTTONS
+ class="btn btn-primary/secondary/success/danger/warning" these colors are specified above in notes.
+
+outline buttons: buttons which are filled with color when they are hovered over:
+class= "btn btn-outline-primary"
+
+class="btn btn-lg" larger button
+class="btn btn-sm" smaller button
+class="btn btn-block" block level buttons.. which occupy the entire width

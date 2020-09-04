@@ -1,0 +1,141 @@
+z-index:
+here to make the image go behind so it does not take space.
+
+This is an advanced css concept:
+
+Basic code:
+
+<div class="red"> RED
+</div>
+<div class="yellow"> yellow
+</div>
+<div class="blue">blue
+</div>
+
+div{
+height: 100px;
+width: 100px;
+border:1px solid;
+}
+.red{
+background-color: red;
+}
+.yellow{
+background-color: yellow;
+}
+.blue{
+background-color: blue;
+}
+
+the easiest way to put one element over the other is by nesting.
+so, we put the yellow div inside the red div as below. so, yellow div
+sits on the red div since it become a child of the red div.
+
+<div class="red"> RED
+<div class="yellow"> yellow
+</div>
+</div>
+<div class="blue">blue
+</div>
+
+div{
+height: 100px;
+width: 100px;
+border:1px solid;
+}
+.red{
+background-color: red;
+}
+.yellow{
+background-color: yellow;
+}
+.blue{
+background-color: blue;
+}
+
+Now consider the basic code:
+
+position: absolute; takes the element out of the flow.
+when this is first added to the div{} in css. only the blue div will be seen.
+it is just that since all three is of same size. yellow and red are below the blue div.
+and all the three div are taken out of the flow. This is without nesting
+
+div{
+height: 100px;
+width: 100px;
+border:1px solid;
+position: absolute;
+}
+
+now if I add left and top of 40px and 20px for the blue and yellow div along with position alternate.
+the div will be stacked above one another.
+.yellow{
+background-color: yellow;
+left: 20px;
+top: 20px;
+}
+.blue{
+background-color: blue;
+left: 40px;
+top: 40px;
+}
+
+Now if I want the yellow div to be on top:
+
+<div class="red"> RED
+</div>
+<div class="blue">blue
+</div>
+<div class="yellow"> yellow
+</div>
+
+div{
+height: 100px;
+width: 100px;
+border:1px solid;
+}
+.red{
+background-color: red;
+}
+.yellow{
+background-color: yellow;
+left: 20px;
+top: 20px;
+}
+.blue{
+background-color: blue;
+left: 40px;
+top: 40px;
+}
+
+
+In order to change the stacking order without changing the div in html manually.
+For this the CSS property called z-index is used. It is one of the properties which can change the stacking order.
+The default z-index is zero.
+It only works when position is explicitly set.
+
+code:
+z-index: 1; to bring the bottom to top
+z-index: -1; to push to the bottom
+
+the basic code put the red behind yellow behind blue.
+
+First:
+.red{
+background-color: red;
+z-index= 1;
+}
+
+this pushes the red to be on top nd nearest to the user with blue behind it followed by yellow.
+red---blue--yellow.
+
+Second:
+
+.blue{
+background-color: blue;
+left: 40px;
+top: 40px;
+z-index: -1;
+}
+
+this pushes the blue to be behind the yellow unlink the last time where blue was above yellow.
