@@ -1,56 +1,61 @@
-body{
-  font-family:'Grandstander';
+body {
+  font-family: 'Grandstander';
+  text-align: center;
 }
-h1 {
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Grandstander';
+  font-weight: bold;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* headings */
+.heading {
   font-family: 'Grandstander';
   font-weight: 900;
   font-size: 3.5rem;
   line-height: 1.5;
 }
 
-h2{
-  font-family: 'Grandstander';
-  font-weight: bold;
+.section-heading{
   font-size: 2.5rem;
   line-height: 1.5;
 }
 
-h3{
-  font-family: 'Grandstander';
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-p{
-  color: #8f8f8f;
-}
+/* Title */
 
 #title {
   background-color: #ff4c68;
   color: #fff;
-  padding: 0 10%;
+  text-align: left;
+}
+
+#title .container-fluid{
+  padding: 3% 10% 7%;
 }
 
 .container-fluid {
-  padding: 3% 3%;
+  padding: 5% 10%;
 }
 
 .navbar {
-  padding:0 0 2.5rem;
+  padding: 0 0 2.5rem;
 }
 
-.navbar-brand{
+.navbar-brand {
   font-family: 'Ubuntu';
   font-size: 2rem;
   font-weight: bold;
-  margin-left: 2rem;
 }
 
-.nav-item{
+.nav-item {
   padding: 0 18px;
 }
 
-.nav-link{
+.nav-link {
   font-size: 1.2rem;
   font-weight: 100;
 }
@@ -63,67 +68,107 @@ p{
 }
 
 /* Download button */
-.download-button{
+.download-button {
   margin: 5% 3% 5% 0;
 }
 
 /* features */
-
-#features{
+#features {
   background-color: #fff;
   position: relative;
-  padding: 5% 10%;
 }
-.feature-box{
-  text-align: center;
+
+.feature-box {
   padding: 5%;
 }
-.col-lg-4{
+
+.feature-title{
+  font-size: 1.5rem;
+}
+
+.col-lg-4 {
   padding: 20px 20px;
 }
+
 /* fontawesome icon centering */
-.icn{
+.icn {
   color: #ef8172;
   margin-bottom: 1rem;
 }
+
 .icn:hover {
-    color: #ff4c68;
+  color: #ff4c68;
 }
 
 /* testimonial */
-#testimonials{
+#testimonials {
   text-align: center;
-  background-color:  #ef8172;
-  color:#fff;
+  background-color: #ef8172;
+  color: #fff;
 }
 
-.testimonial-img{
-  width:20%;
+.testimonial-img {
+  width: 20%;
   border-radius: 100%;
   margin: 20px;
 }
 
-.carousel-item{
-  padding: 7% 15%;
+.testimonial-text{
+  font-size: 2.5rem;
+  line-height: 1.5;
 }
 
 /* press */
-#press{
-  text-align: center;
-  background-color:  #ef8172;
+#press {
+  background-color: #ef8172;
   padding-bottom: 3%
 }
 
-.press-logo{
+.press-logo {
   width: 15%;
   margin: 20px 20px 50px;
 }
 
 /* pricing */
-#pricing{
-  margin:100px;
-  text-align: center;
+#pricing {
+  margin: 5%;
 }
-.pricing-col{
+
+.pricing-col {
   padding: 3% 2%;
+}
+
+.price-text{
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+.card-title{
+  font-size: 1.5rem;
+}
+
+/* Contact */
+#cta {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+/* CopyRight */
+#footer {
+  background-color: #fff;
+}
+
+.footer-social {
+  padding: 10px;
+}
+
+/* MIDEA QUERY */
+@media (max-width:1028px) {
+  .iphone-img {
+    position: static;
+    transform: rotate(0);
+  }
+
+  #title {
+    text-align: center;
+  }
 }
